@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+</head>
+
+
+<body class="Bananclass">
+<style>
+	.Bananclass {
+	background-color: chartreuse
+	}
+	.colourBoxClass {
+	border-style: ridge
+	}
+</style>
+
+<div id="BananDivId" class="colourBoxClass">
+	I love my Banan
+</div>
+
+<script>
+	const BananBox = document.querySelector("#BananDivId") //FIND ME THE BOX WITH ID BANANDIVID
+	console.log(BananBox);
+	BananBox.addEventListener( 'click', function () {
+		const bananBody = document.querySelector(".Bananclass");
+		bananBody.style.backgroundColor = "magenta";
+		alert("Hi Banan!");
+	});
+</script>
+
+
+
+</body>
+
+
+</html>
