@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+	<style>
+		.colourBoxClass {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			position: relative;
+			margin-bottom: 100px;
+		}
+	</style>
+ 
+	<div id="colourBox" class="colourBoxClass">
+	</div> 
+ 
+	<label> Colour
+		<input id="inputColour" >
+		</input>
+	</label>
+ 
+	<label> Name 
+		<input id="inputName" >
+		</input>
+	</label>
+ 
+	<script>
+		const colourInput = document.querySelector("#inputColour");
+		const nameInput = document.querySelector("#inputName");
+		const colourBoxThing = document.querySelector("#colourBox");	
+		
+		colourInput.addEventListener( 'change', updateColour);
+	
+		function updateColour(e) {
+			colourBoxThing.style.backgroundColor = e.target.value;
+		};
+	
+		nameInput.addEventListener( 'change', updateName);
+	
+		function updateName(f) {
+			colourBoxThing.textContent = f.target.value;
+		};
+	</script>
+
+
+</body>
+
+</html>
